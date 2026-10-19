@@ -163,7 +163,7 @@ function get_oa_sidebar_wrapper(frm) {
 }
 
 function get_oa_sidebar_link_html({ label, value, action }) {
-	const safe_label = frappe.utils.escape_html(label);
+	const safe_label = frappe.utils.escape_html(__(label));
 	const safe_value = frappe.utils.escape_html(value || "");
 	const safe_action = frappe.utils.escape_html(action);
 

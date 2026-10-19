@@ -1,0 +1,147 @@
+MXN 汇率待复核,MXN exchange rate to be reviewed
+OA Purchase Request 模板码不匹配：{0},OA Purchase Request template code does not match: {0}
+OA Purchase Request 缺少 process_instance_id,OA Purchase Request Missing process_instance_id
+OA国际物流编码,OA international logistics code
+refresh_oa_purchase_source 仅支持拉丁购历史回填记录,refresh_oa_purchase_source only supports Latingo historical backfill records
+{0} 不存在：{1},{0} does not exist: {1}
+临时供应商待替换,Temporary Supplier to be replaced
+仅 Administrator 或 System Manager 可以执行拉丁购历史回填,Only Administrator or System Manager can perform Latingo history backfilling
+价格待补,Price to be paid
+供应商,Supplier
+关闭,Close
+单位不存在：{0},Unit does not exist: {0}
+原始收款方,original payee
+另一个拉丁购历史回填任务正在执行，请稍后重试,"Another Latingo history backfill task is being executed, please try again later."
+国际物流审批缺少 process_instance_id：{0},Missing international logistics approval process_instance_id: {0}
+已关闭,Closed
+已关闭 {0} 条记录,{0} records closed
+已关闭的 OA Purchase Request 不能生成采购订单,The closed OA Purchase Request cannot generate Purchase Order
+已生成采购订单,Purchase Order has been generated
+已生成采购订单：{0},Purchase Order has been generated: {0}
+开始日期和结束日期必须是有效的正向日期范围,Start and end dates must be valid forward date ranges
+打开钉钉审批,Open DingTalk Approval
+拉丁购历史回填,Latingo historical backfill
+拉丁购历史回填固定范围为 {0} 至 {1},The fixed range of Latingo historical backfill is {0} to {1}
+拉丁购历史回填采购订单缺少 OA Purchase Request 来源,Latingo History Backfill Purchase Order Missing OA Purchase Request Source
+拉丁购来源实例 ID,Latingo source example ID
+拉丁购来源指纹,Latingo source fingerprint
+无法复核采购支出来源，禁止提交：{0},The source of procurement expenditure cannot be reviewed and submission is prohibited: {0}
+显示空字段,Show empty fields
+未找到 OA Logistics Code 对应的国际物流审批：{0},The international logistics approval corresponding to OA Logistics Code was not found: {0}
+未找到可用的物料组，无法自动创建物料,The available Item Group was not found and the material could not be automatically created.
+未找到默认公司，无法生成采购订单,"Default company not found, unable to generate Purchase Order"
+未生成采购订单,Purchase Order not generated
+来源失效,Source invalid
+来源审批中,Source under approval
+来源审批明确的 1% 进项税,1% with clear source approval Input VAT
+来源审批状态,Source approval status
+来源审批结果,Source approval results
+来源已变化,Source has changed
+正在关闭...,Closing...
+正在打开钉钉审批...,Opening DingTalk approval...
+正在生成采购订单...,Generating Purchase Order...
+没有可生成采购订单的有效需求明细,There is no valid requirement detail to generate Purchase Order
+没有可生成采购订单的需求明细,No requirement details can be generated for Purchase Order
+物料 {0} 已属于其他子公司,Material {0} already belongs to other subsidiaries
+物料组不存在：{0},Item group does not exist: {0}
+生成,generate
+生成失败,Build failed
+生成采购订单,Generate Purchase Order
+申请开始,Application starts
+申请结束,Application ends
+税费科目不存在：{0},The tax account does not exist: {0}
+第 {0} 行物料编码不存在：{1}，不能创建采购订单,"Line {0} Item Code does not exist: {1}, Purchase Order cannot be created"
+第 {0} 行缺少物料编码，不能创建采购订单,Item Code is missing at line {0} and Purchase Order cannot be created.
+缺少 OA Logistics Code,Missing OA Logistics Code
+缺少 OA Purchase Request 的 process_instance_id,Missing process_instance_id for OA Purchase Request
+请先选择要关闭的记录,Please select the record you want to close first
+请填写供应商,Please fill in Supplier
+采购订单 {0} 已生成,Purchase Order {0} has been generated
+金额,Amount
+隐藏空字段,Hide empty fields
+预览指纹已变化，请重新预览并确认,"The preview fingerprint has changed, please preview again and confirm"
+默认仓库不存在：{0},The default warehouse does not exist: {0}
+钉钉审批状态,DingTalk Approval Status
+来源币种,Source Currency
+来源状态,Source Status
+申请日期Fecha de solicitud,Application Date
+申请部门/组织 Departamento Solicitante,Requesting Department / Organization
+生产/非生产Produccion / No produccion,Production / Non-production
+本月预算金额Importe presupuestado del mes,Monthly Budget Amount
+本月预算已用金额Importe utilizado del presupuesto mensual,Monthly Budget Used
+采购支出Gastos de Compra,Purchase Expenditure
+订单Pedido,Order
+项目Proyecto,Project
+产品Producto,Product
+YW OEM IML Phone Case OEM IML手机保护套类,YW OEM IML Phone Cases
+YW OEM Phone Case OEM手机保护套类,YW OEM Phone Cases
+YW OEM Tablet Case YW OEM 平板保护套类,YW OEM Tablet Cases
+YW OEM Soporte 支架类,YW OEM Stands
+YW MOLDES ODM YW模具 ODM类,YW ODM Molds
+咨询服务类 Servicios De Consultoria,Consulting Services
+Tiktok线上店铺,TikTok Online Store
+执行地区Region de ejecucion,Execution Region
+订单采购Compras por pedido,Order-based Purchasing
+费用分类 Clasificacion de gastos,Expense Category
+投资采购Compra de inversion,Investment Purchasing
+服务类采购 Adquisiciones de servicios,Service Purchasing
+MRO分类Clasificacion MRO,MRO Category
+生产性 Productivo MRO,Production MRO
+非生产性 No productivo MRO,Non-production MRO
+PDS分类Clasificacion PDS,PDS Category
+计件外包 Outsourcing por pieza,Piecework Outsourcing
+物流及运输服务Servicios de logistica y transporte,Logistics and Transport Services
+清关服务Servicios de despacho aduanero,Customs Clearance Services
+需求明细,Requirement Details
+需求明细Desglose de los gastos,Requirement Details
+明细汇总金额Monto total detallado,Detail Total Amount
+加工商明细,Processor Details
+加工商明细detalles de los procesadores,Processor Details
+加工商名字Nombre del proveedor de servicios de procesam,Processor Name
+加工商电话Telefono del proveedor de servicios de proces,Processor Phone
+销售订单号码El numero de la orden de venta,Sales Order Number
+加工物料Materiales de Procesamiento,Processing Materials
+数量Cantidad,Quantity
+单价Precio Unitario,Unit Price
+总金额Monto Total,Total Amount
+规格明细需求说明Descripcion de las necesidades de detalles,Specification and Requirement Description
+交付日期Fecha de entrega,Delivery Date
+付款信息,Payment Information
+收款人beneficiario,Payee
+金额importe,Amount
+付款条件Terminos de pago,Payment Terms
+币种Moneda,Currency
+付款日期Fecha de pago,Payment Date
+关键凭证Comprobante clave,Key Supporting Documents
+审批完成时间,Approval Completion Time
+当前节点,Current Step
+当前负责人,Current Assignee
+历史审批人,Previous Approvers
+审批编号,Approval Number
+创建人,Created By
+创建时间,Creation Time
+更新时间,Last Updated
+创建人部门,Creator Department
+来源指纹,Source Fingerprint
+最新来源指纹,Latest Source Fingerprint
+目标公司,Target Company
+目标仓库,Target Warehouse
+临时供应商,Temporary Supplier
+来源汇率,Source Exchange Rate
+汇率待复核,Exchange Rate Pending Review
+物品名称,Item Name
+编码,Code
+规格,Specification
+数量,Quantity
+单位,Unit
+加工商名字,Processor Name
+电话,Phone
+销售订单,Sales Order
+加工物料,Processing Materials
+单价,Unit Price
+收款人,Payee
+付款条件,Payment Terms
+币种,Currency
+付款日期,Payment Date
+已建草稿,Draft Created
+待复核,Pending Review

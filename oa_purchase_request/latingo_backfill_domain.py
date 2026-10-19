@@ -7,6 +7,13 @@ file owns the deterministic scope, mapping, fingerprint and submit rules.
 
 from __future__ import annotations
 
+try:
+	from frappe import _
+except ImportError:
+	def _(message):
+		return message
+
+
 import hashlib
 import json
 import unicodedata
@@ -192,7 +199,7 @@ def iter_month_windows(start_date, end_date) -> list[tuple[date, date]]:
 	start = _date(start_date)
 	end = _date(end_date)
 	if not start or not end or end < start:
-		raise ValueError("开始日期和结束日期必须是有效的正向日期范围")
+		raise ValueError(_("开始日期和结束日期必须是有效的正向日期范围"))
 	windows = []
 	cursor = start
 	while cursor <= end:

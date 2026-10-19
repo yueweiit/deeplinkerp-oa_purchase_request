@@ -1,0 +1,64 @@
+DingTalk did not return access_token,钉钉未返回access_token
+Frappe runtime is required,需要冰沙运行时间
+Missing dingtalk_app_key or dingtalk_app_secret in site_config,site_config 中缺少 dingtalk_app_key 或 dingtalk_app_secret
+Missing process_instance_id for DingTalk approval attachment download,钉钉审批附件下载缺少process_instance_id
+OA Logistics Code,OA 物流编码
+OA Purchase Request,OA 采购请求
+申请日期Fecha de solicitud,申请日期
+申请部门/组织 Departamento Solicitante,申请部门/组织
+生产/非生产Produccion / No produccion,生产/非生产
+本月预算金额Importe presupuestado del mes,本月预算金额
+本月预算已用金额Importe utilizado del presupuesto mensual,本月预算已用金额
+采购支出Gastos de Compra,采购支出
+订单Pedido,订单
+项目Proyecto,项目
+产品Producto,产品
+YW OEM IML Phone Case OEM IML手机保护套类,YW OEM IML 手机保护套类
+YW OEM Phone Case OEM手机保护套类,YW OEM 手机保护套类
+YW OEM Tablet Case YW OEM 平板保护套类,YW OEM 平板保护套类
+YW OEM Soporte 支架类,YW OEM 支架类
+YW MOLDES ODM YW模具 ODM类,YW 模具 ODM 类
+咨询服务类 Servicios De Consultoria,咨询服务类
+Tiktok线上店铺,TikTok 线上店铺
+执行地区Region de ejecucion,执行地区
+订单采购Compras por pedido,订单采购
+费用分类 Clasificacion de gastos,费用分类
+投资采购Compra de inversion,投资采购
+服务类采购 Adquisiciones de servicios,服务类采购
+MRO分类Clasificacion MRO,MRO 分类
+生产性 Productivo MRO,生产性 MRO
+非生产性 No productivo MRO,非生产性 MRO
+PDS分类Clasificacion PDS,PDS 分类
+计件外包 Outsourcing por pieza,计件外包
+物流及运输服务Servicios de logistica y transporte,物流及运输服务
+清关服务Servicios de despacho aduanero,清关服务
+需求明细Desglose de los gastos,需求明细
+明细汇总金额Monto total detallado,明细汇总金额
+加工商明细detalles de los procesadores,加工商明细
+加工商名字Nombre del proveedor de servicios de procesam,加工商名字
+加工商电话Telefono del proveedor de servicios de proces,加工商电话
+销售订单号码El numero de la orden de venta,销售订单号码
+加工物料Materiales de Procesamiento,加工物料
+数量Cantidad,数量
+单价Precio Unitario,单价
+总金额Monto Total,总金额
+规格明细需求说明Descripcion de las necesidades de detalles,规格明细需求说明
+交付日期Fecha de entrega,交付日期
+收款人beneficiario,收款人
+金额importe,金额
+付款条件Terminos de pago,付款条件
+币种Moneda,币种
+付款日期Fecha de pago,付款日期
+关键凭证Comprobante clave,关键凭证
+Process Instance ID,流程实例 ID
+Process Code,流程编码
+Form Name,表单名称
+Raw Payload,原始数据
+Sync Status,同步状态
+Purchase Order,采购订单
+Error Message,错误信息
+Pending Purchase Order,待生成采购订单
+Purchase Order Created,已生成采购订单
+Closed,已关闭
+Failed,失败
+ODT,ODT

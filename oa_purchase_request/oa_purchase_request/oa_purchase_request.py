@@ -1,3 +1,6 @@
+
+from frappe import _
+
 import json
 import mimetypes
 import os
@@ -170,14 +173,14 @@ def get_oa_purchase_request_dingtalk_url(docname):
 
 	process_instance_id = (doc.get("process_instance_id") or "").strip()
 	if not process_instance_id:
-		frappe.throw("缺少 OA Purchase Request 的 process_instance_id")
+		frappe.throw(_("缺少 OA Purchase Request 的 process_instance_id"))
 
 	process_code = (doc.get("process_code") or "").strip()
 	if process_code and process_code not in {
 		OA_PURCHASE_REQUEST_PROCESS_CODE,
 		OA_LATINGO_PURCHASE_REQUEST_PROCESS_CODE,
 	}:
-		frappe.throw(f"OA Purchase Request 模板码不匹配：{process_code}")
+		frappe.throw(_("OA Purchase Request 模板码不匹配：{0}").format(process_code))
 
 	return {"dingtalk_url": get_dingtalk_approval_url(process_instance_id)}
 
@@ -186,15 +189,15 @@ def get_oa_purchase_request_dingtalk_url(docname):
 def get_oa_logistics_dingtalk_url(oa_logistics_code):
 	oa_logistics_code = (oa_logistics_code or "").strip()
 	if not oa_logistics_code:
-		frappe.throw("缺少 OA Logistics Code")
+		frappe.throw(_("缺少 OA Logistics Code"))
 
 	rows = find_oa_logistics_approval_rows(oa_logistics_code)
 	if not rows:
-		frappe.throw(f"未找到 OA Logistics Code 对应的国际物流审批：{oa_logistics_code}")
+		frappe.throw(_("未找到 OA Logistics Code 对应的国际物流审批：{0}").format(oa_logistics_code))
 
 	process_instance_id = rows[0].process_instance_id
 	if not process_instance_id:
-		frappe.throw(f"国际物流审批缺少 process_instance_id：{oa_logistics_code}")
+		frappe.throw(_("国际物流审批缺少 process_instance_id：{0}").format(oa_logistics_code))
 
 	return {"dingtalk_url": get_dingtalk_approval_url(process_instance_id)}
 
@@ -299,27 +302,27 @@ def create_purchase_order(docname, supplier_name, oa_logistics_item_code=None, o
 	oa_logistics_item_code = (oa_logistics_item_code or "").strip()
 	oa_logistics_amount = "" if oa_logistics_amount in (None, "") else oa_logistics_amount
 	if not supplier_name:
-		frappe.throw("请填写供应商")
+		frappe.throw(_("请填写供应商"))
 
 	if doc.get("sync_status") == "Closed":
-		frappe.throw("已关闭的 OA Purchase Request 不能生成采购订单")
+		frappe.throw(_("已关闭的 OA Purchase Request 不能生成采购订单"))
 
 	if doc.get("purchase_order") and frappe.db.exists("Purchase Order", doc.purchase_order):
-		frappe.throw(f"已生成采购订单：{doc.purchase_order}")
+		frappe.throw(_("已生成采购订单：{0}").format(doc.purchase_order))
 
 	if not frappe.db.exists("Warehouse", DEFAULT_PURCHASE_WAREHOUSE):
-		frappe.throw(f"默认仓库不存在：{DEFAULT_PURCHASE_WAREHOUSE}")
+		frappe.throw(_("默认仓库不存在：{0}").format(DEFAULT_PURCHASE_WAREHOUSE))
 
 	if not doc.get("items"):
 		normalize_child_tables(doc)
 
 	if not doc.get("items"):
-		frappe.throw("没有可生成采购订单的需求明细")
+		frappe.throw(_("没有可生成采购订单的需求明细"))
 
 	supplier = get_or_create_supplier(supplier_name)
 	company = frappe.defaults.get_user_default("Company") or frappe.db.get_default("company")
 	if not company:
-		frappe.throw("未找到默认公司，无法生成采购订单")
+		frappe.throw(_("未找到默认公司，无法生成采购订单"))
 
 	schedule_date = get_purchase_order_schedule_date(doc)
 	purchase_order = frappe.new_doc("Purchase Order")
@@ -358,7 +361,7 @@ def create_purchase_order(docname, supplier_name, oa_logistics_item_code=None, o
 		)
 
 	if not purchase_order.get("items"):
-		frappe.throw("没有可生成采购订单的有效需求明细")
+		frappe.throw(_("没有可生成采购订单的有效需求明细"))
 
 	purchase_order.insert(ignore_permissions=True)
 
@@ -432,12 +435,12 @@ def has_meaningful_item_row(row):
 def get_existing_item(row):
 	item_code = (row.get("item_code") or "").strip()
 	if not item_code:
-		frappe.throw(f"第 {row.idx} 行缺少物料编码，不能创建采购订单")
+		frappe.throw(_("第 {0} 行缺少物料编码，不能创建采购订单").format(row.idx))
 
 	if frappe.db.exists("Item", item_code):
 		return item_code
 
-	frappe.throw(f"第 {row.idx} 行物料编码不存在：{item_code}，不能创建采购订单")
+	frappe.throw(_("第 {0} 行物料编码不存在：{1}，不能创建采购订单").format(row.idx, item_code))
 
 
 def get_item_uom(item_code, requested_uom=None):
@@ -459,7 +462,7 @@ def get_or_create_uom(uom):
 def get_default_item_group():
 	item_group = frappe.db.get_value("Item Group", {"is_group": 0}, "name")
 	if not item_group:
-		frappe.throw("未找到可用的物料组，无法自动创建物料")
+		frappe.throw(_("未找到可用的物料组，无法自动创建物料"))
 	return item_group
 
 

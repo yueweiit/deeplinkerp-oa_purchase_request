@@ -2,6 +2,13 @@
 
 from __future__ import annotations
 
+try:
+	from frappe import _
+except ImportError:
+	def _(message):
+		return message
+
+
 import json
 from decimal import Decimal, ROUND_HALF_UP
 
@@ -43,7 +50,7 @@ def _whitelist(function=None, **options):
 def _validate_backfill_range(start_date, end_date) -> None:
 	if str(start_date) != BACKFILL_START_DATE or str(end_date) != BACKFILL_END_DATE:
 		raise ValueError(
-			f"拉丁购历史回填固定范围为 {BACKFILL_START_DATE} 至 {BACKFILL_END_DATE}"
+			_("拉丁购历史回填固定范围为 {0} 至 {1}").format(BACKFILL_START_DATE, BACKFILL_END_DATE)
 		)
 
 
@@ -208,7 +215,7 @@ def analyze_backfill_state(plans, *, item_lookup, oa_by_process, oa_by_business)
 
 def assert_apply_safe(preview: dict, expected_fingerprint: str) -> None:
 	if not expected_fingerprint or preview.get("fingerprint") != expected_fingerprint:
-		raise ValueError("预览指纹已变化，请重新预览并确认")
+		raise ValueError(_("预览指纹已变化，请重新预览并确认"))
 	if preview.get("conflicts"):
 		raise ValueError("；".join(preview.get("conflicts") or []))
 
@@ -218,7 +225,7 @@ def _assert_system_manager() -> None:
 		raise RuntimeError("Frappe runtime is required")
 	user = frappe.session.user
 	if user != "Administrator" and "System Manager" not in frappe.get_roles(user):
-		frappe.throw("仅 Administrator 或 System Manager 可以执行拉丁购历史回填")
+		frappe.throw(_("仅 Administrator 或 System Manager 可以执行拉丁购历史回填"))
 
 
 def _collect_from_archive(start_date, end_date) -> dict:
@@ -438,7 +445,7 @@ def _ensure_item(item: dict):
 	if frappe.db.exists("Item", item_code):
 		owner = frappe.db.get_value("Item", item_code, "custom_overseas_business_entity") or ""
 		if owner and owner != LATINGO_COMPANY:
-			raise ValueError(f"物料 {item_code} 已属于其他子公司")
+			raise ValueError(_("物料 {0} 已属于其他子公司").format(item_code))
 		if not owner:
 			frappe.db.set_value(
 				"Item",
@@ -450,9 +457,9 @@ def _ensure_item(item: dict):
 		return
 
 	if not frappe.db.exists("Item Group", item["item_group"]):
-		raise ValueError(f"物料组不存在：{item['item_group']}")
+		raise ValueError(_("物料组不存在：{0}").format(item['item_group']))
 	if not frappe.db.exists("UOM", item["stock_uom"]):
-		raise ValueError(f"单位不存在：{item['stock_uom']}")
+		raise ValueError(_("单位不存在：{0}").format(item['stock_uom']))
 	doc = frappe.new_doc("Item")
 	doc.item_code = item_code
 	doc.item_name = item.get("item_name") or item_code
@@ -471,9 +478,9 @@ def _ensure_master_data(plans):
 		("Cost Center", LATINGO_COST_CENTER),
 	):
 		if not frappe.db.exists(doctype, name):
-			raise ValueError(f"{doctype} 不存在：{name}")
+			raise ValueError(_("{0} 不存在：{1}").format(doctype, name))
 	if any(plan.get("taxes") for plan in plans) and not frappe.db.exists("Account", LATINGO_INPUT_TAX_ACCOUNT):
-		raise ValueError(f"税费科目不存在：{LATINGO_INPUT_TAX_ACCOUNT}")
+		raise ValueError(_("税费科目不存在：{0}").format(LATINGO_INPUT_TAX_ACCOUNT))
 
 	_ensure_supplier_group()
 	_ensure_service_item_group()
@@ -634,7 +641,7 @@ def apply_latingo_purchase_backfill(start_date, end_date, expected_fingerprint):
 	lock_name = "oa_purchase_request:latingo_purchase_backfill"
 	lock_rows = frappe.db.sql("select get_lock(%s, 15)", (lock_name,))
 	if not lock_rows or int(lock_rows[0][0] or 0) != 1:
-		frappe.throw("另一个拉丁购历史回填任务正在执行，请稍后重试")
+		frappe.throw(_("另一个拉丁购历史回填任务正在执行，请稍后重试"))
 	try:
 		preview = _build_preview(start_date, end_date)
 		assert_apply_safe(preview, expected_fingerprint)
@@ -708,10 +715,10 @@ def _current_source_plan(process_instance_id: str) -> dict | None:
 def _refresh_oa_source_internal(docname: str) -> dict:
 	oa_doc = frappe.get_doc("OA Purchase Request", docname)
 	if not oa_doc.get("backfill_imported"):
-		raise ValueError("refresh_oa_purchase_source 仅支持拉丁购历史回填记录")
+		raise ValueError(_("refresh_oa_purchase_source 仅支持拉丁购历史回填记录"))
 	process_instance_id = (oa_doc.get("process_instance_id") or "").strip()
 	if not process_instance_id:
-		raise ValueError("OA Purchase Request 缺少 process_instance_id")
+		raise ValueError(_("OA Purchase Request 缺少 process_instance_id"))
 	plan = _current_source_plan(process_instance_id)
 	if not plan:
 		result = {
@@ -796,11 +803,11 @@ def validate_latingo_purchase_order_submission(doc, method=None):
 		return
 	oa_request = doc.get("custom_oa_purchase_expense")
 	if not oa_request:
-		frappe.throw("拉丁购历史回填采购订单缺少 OA Purchase Request 来源")
+		frappe.throw(_("拉丁购历史回填采购订单缺少 OA Purchase Request 来源"))
 	try:
 		fresh = _refresh_oa_source_internal(oa_request)
 	except Exception as exc:
-		frappe.throw(f"无法复核采购支出来源，禁止提交：{exc}")
+		frappe.throw(_("无法复核采购支出来源，禁止提交：{0}").format(exc))
 
 	flags = {
 		"source_pending": bool(fresh.get("source_pending")),

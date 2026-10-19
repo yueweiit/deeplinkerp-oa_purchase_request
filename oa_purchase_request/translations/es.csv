@@ -1,0 +1,165 @@
+DingTalk did not return access_token,DingTalk no devolvió access_token
+Frappe runtime is required,Se requiere tiempo de ejecución de Frappe
+MXN 汇率待复核,Tipo de cambio MXN a revisar
+Missing dingtalk_app_key or dingtalk_app_secret in site_config,Falta dingtalk_app_key o dingtalk_app_secret en site_config
+Missing process_instance_id for DingTalk approval attachment download,Falta process_instance_id para descargar el archivo adjunto de aprobación de DingTalk
+OA Logistics Code,Código de logística OA
+OA Purchase Request,Solicitud de compra OA
+OA Purchase Request 模板码不匹配：{0},OA El código de plantilla de solicitud de compra no coincide: {0}
+OA Purchase Request 缺少 process_instance_id,OA Falta solicitud de compra process_instance_id
+OA国际物流编码,Código de logística internacional OA
+refresh_oa_purchase_source 仅支持拉丁购历史回填记录,refresh_oa_purchase_source solo admite registros de reabastecimiento históricos Latingo
+{0} 不存在：{1},{0} no existe: {1}
+临时供应商待替换,Proveedor temporal para ser reemplazado
+仅 Administrator 或 System Manager 可以执行拉丁购历史回填,Sólo el administrador o el administrador del sistema pueden realizar el reabastecimiento del historial Latingo
+价格待补,Precio a pagar
+供应商,Proveedor
+关闭,Cerrar
+单位不存在：{0},La unidad no existe: {0}
+原始收款方,beneficiario original
+另一个拉丁购历史回填任务正在执行，请稍后重试,Se está ejecutando otra tarea de reposición del historial Latingo. Vuelva a intentarlo más tarde.
+国际物流审批缺少 process_instance_id：{0},Falta aprobación logística internacional process_instance_id: {0}
+已关闭,Cerrado
+已关闭 {0} 条记录,Registros {0} cerrados
+已关闭的 OA Purchase Request 不能生成采购订单,La solicitud de compra OA cerrada no puede generar Pedido de Compra
+已生成采购订单,Se ha generado Pedido de Compra.
+已生成采购订单：{0},Se ha generado Pedido de Compra: {0}
+开始日期和结束日期必须是有效的正向日期范围,Las fechas de inicio y finalización deben ser rangos de fechas anticipadas válidos.
+打开钉钉审批,Aprobación abierta DingTalk
+拉丁购历史回填,Relleno histórico Latingo
+拉丁购历史回填固定范围为 {0} 至 {1},El rango fijo de relleno histórico de Latingo es de {0} a {1}.
+拉丁购历史回填采购订单缺少 OA Purchase Request 来源,Latingo Relleno histórico Pedido de Compra Falta OA Fuente de solicitud de compra
+拉丁购来源实例 ID,Ejemplo de fuente Latingo ID
+拉丁购来源指纹,Huella digital de origen Latingo
+无法复核采购支出来源，禁止提交：{0},La fuente de los gastos de adquisiciones no se puede revisar y se prohíbe la presentación: {0}
+显示空字段,Mostrar campos vacíos
+未找到 OA Logistics Code 对应的国际物流审批：{0},No se encontró la aprobación logística internacional correspondiente al OA Código Logístico: {0}
+未找到可用的物料组，无法自动创建物料,No se encontró el Grupo de Artículos disponible y el material no se pudo crear automáticamente.
+未找到默认公司，无法生成采购订单,"No se encontró la empresa predeterminada, no se puede generar Pedido de Compra"
+未生成采购订单,Pedido de Compra no generado
+来源失效,Fuente no válida
+来源审批中,Fuente bajo aprobación
+来源审批明确的 1% 进项税,1% con aprobación de fuente clara IVA Soportado
+来源审批状态,Estado de aprobación en origen
+来源审批结果,Resultados de aprobación de fuente
+来源已变化,La fuente ha cambiado
+正在关闭...,Cerrando...
+正在打开钉钉审批...,Apertura aprobación DingTalk...
+正在生成采购订单...,Generando Pedido de Compra...
+没有可生成采购订单的有效需求明细,No hay ningún detalle de requisito válido para generar Pedido de Compra
+没有可生成采购订单的需求明细,No se pueden generar detalles de requisitos para Pedido de Compra
+物料 {0} 已属于其他子公司,El material {0} ya pertenece a otras filiales
+物料组不存在：{0},El grupo de artículos no existe: {0}
+生成,generar
+生成失败,Error de compilación
+生成采购订单,Generar Pedido de Compra
+申请开始,Se inicia la aplicación
+申请结束,La aplicación finaliza
+税费科目不存在：{0},La cuenta de impuestos no existe: {0}
+第 {0} 行物料编码不存在：{1}，不能创建采购订单,"La línea {0} Código del Artículo no existe: {1}, Pedido de Compra no se pueden crear"
+第 {0} 行缺少物料编码，不能创建采购订单,Falta Código del Artículo en la línea {0} y no se puede crear Pedido de Compra.
+缺少 OA Logistics Code,Falta el código de logística OA
+缺少 OA Purchase Request 的 process_instance_id,Falta process_instance_id para la solicitud de compra de OA
+请先选择要关闭的记录,Por favor seleccione el registro que desea cerrar primero
+请填写供应商,Por favor complete Proveedor
+采购订单 {0} 已生成,Pedido de Compra {0} ha sido generado
+金额,Importe
+隐藏空字段,Ocultar campos vacíos
+预览指纹已变化，请重新预览并确认,La huella digital de vista previa ha cambiado. Vuelva a obtener una vista previa y confirme.
+默认仓库不存在：{0},El almacén predeterminado no existe: {0}
+钉钉审批状态,Estado de aprobación de DingTalk
+来源币种,Moneda de origen
+来源状态,Estado de origen
+申请日期Fecha de solicitud,Fecha de solicitud
+申请部门/组织 Departamento Solicitante,Departamento / organización solicitante
+生产/非生产Produccion / No produccion,Producción / No producción
+本月预算金额Importe presupuestado del mes,Presupuesto mensual
+本月预算已用金额Importe utilizado del presupuesto mensual,Presupuesto mensual utilizado
+采购支出Gastos de Compra,Gastos de compra
+订单Pedido,Pedido
+项目Proyecto,Proyecto
+产品Producto,Producto
+YW OEM IML Phone Case OEM IML手机保护套类,Fundas de teléfono YW OEM IML
+YW OEM Phone Case OEM手机保护套类,Fundas de teléfono YW OEM
+YW OEM Tablet Case YW OEM 平板保护套类,Fundas de tableta YW OEM
+YW OEM Soporte 支架类,Soportes YW OEM
+YW MOLDES ODM YW模具 ODM类,Moldes YW ODM
+咨询服务类 Servicios De Consultoria,Servicios de consultoría
+Tiktok线上店铺,Tienda en línea de TikTok
+执行地区Region de ejecucion,Región de ejecución
+订单采购Compras por pedido,Compras por pedido
+费用分类 Clasificacion de gastos,Categoría de gastos
+投资采购Compra de inversion,Compras de inversión
+服务类采购 Adquisiciones de servicios,Adquisición de servicios
+MRO分类Clasificacion MRO,Categoría MRO
+生产性 Productivo MRO,MRO de producción
+非生产性 No productivo MRO,MRO no productivo
+PDS分类Clasificacion PDS,Categoría PDS
+计件外包 Outsourcing por pieza,Subcontratación por pieza
+物流及运输服务Servicios de logistica y transporte,Servicios de logística y transporte
+清关服务Servicios de despacho aduanero,Servicios de despacho aduanero
+需求明细,Detalles de la solicitud
+需求明细Desglose de los gastos,Detalles de la solicitud
+明细汇总金额Monto total detallado,Importe total de los detalles
+加工商明细,Detalles del proveedor de procesamiento
+加工商明细detalles de los procesadores,Detalles del proveedor de procesamiento
+加工商名字Nombre del proveedor de servicios de procesam,Nombre del proveedor de procesamiento
+加工商电话Telefono del proveedor de servicios de proces,Teléfono del proveedor de procesamiento
+销售订单号码El numero de la orden de venta,Número de pedido de venta
+加工物料Materiales de Procesamiento,Materiales de procesamiento
+数量Cantidad,Cantidad
+单价Precio Unitario,Precio unitario
+总金额Monto Total,Importe total
+规格明细需求说明Descripcion de las necesidades de detalles,Descripción de especificaciones y requisitos
+交付日期Fecha de entrega,Fecha de entrega
+付款信息,Información de pago
+收款人beneficiario,Beneficiario
+金额importe,Importe
+付款条件Terminos de pago,Condiciones de pago
+币种Moneda,Moneda
+付款日期Fecha de pago,Fecha de pago
+关键凭证Comprobante clave,Documentos justificativos principales
+审批完成时间,Fecha y hora de finalización de la aprobación
+当前节点,Paso actual
+当前负责人,Responsable actual
+历史审批人,Aprobadores anteriores
+审批编号,Número de aprobación
+创建人,Creado por
+创建时间,Fecha y hora de creación
+更新时间,Última actualización
+创建人部门,Departamento del creador
+Process Instance ID,ID de instancia del proceso
+Process Code,Código del proceso
+Form Name,Nombre del formulario
+Raw Payload,Datos originales
+Sync Status,Estado de sincronización
+Purchase Order,Pedido de compra
+Error Message,Mensaje de error
+来源指纹,Huella digital de origen
+最新来源指纹,Última huella digital de origen
+目标公司,Empresa de destino
+目标仓库,Almacén de destino
+临时供应商,Proveedor temporal
+来源汇率,Tipo de cambio de origen
+汇率待复核,Tipo de cambio pendiente de revisión
+物品名称,Nombre del artículo
+编码,Código
+规格,Especificación
+数量,Cantidad
+单位,Unidad
+加工商名字,Nombre del proveedor de procesamiento
+电话,Teléfono
+销售订单,Pedido de venta
+加工物料,Materiales de procesamiento
+单价,Precio unitario
+收款人,Beneficiario
+付款条件,Condiciones de pago
+币种,Moneda
+付款日期,Fecha de pago
+已建草稿,Borrador creado
+Pending Purchase Order,Pendiente de pedido de compra
+Purchase Order Created,Pedido de compra creado
+待复核,Pendiente de revisión
+Closed,Cerrado
+Failed,Fallido
+ODT,ODT
